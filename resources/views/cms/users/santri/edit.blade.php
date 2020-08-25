@@ -1,7 +1,7 @@
 <form method="post" action="{{ route('santri-update', $data['user']->id)  }}">
 @csrf
     <div class="form-group ">
-        <label for="nis">nis</label>
+        <label for="nis">NIS</label>
         <input class="form-control" name="nis" type="text" value="{{$data['user']->nis}}" id="nis">
     </div>
     <div class="form-group ">
@@ -13,9 +13,8 @@
             <thead>
                 <tr>
                 <th scope="col">No</th>
-                <th scope="col">Nama Package</th>
-                <th scope="col">Harga Package</th>
-                <th scope="col">Speed</th>
+                <th scope="col">Nama </th>
+                <th scope="col">Price</th>
                 </tr>
             </thead>
             <tbody>

@@ -53,9 +53,9 @@ class SantriController extends Controller
             function ($data){                                
             
                     return
-                    // \Component::btnDetailPaket(route('santri-detail'), 'Detail santri').
-                    \Component::btnUpdate(route('santri-edit', $data->id), 'Ubah santri '. $data->name).
-                    \Component::btnDelete(route('santri-destroy', $data->id), 'Hapus santri '. $data->name);
+                    \Component::btnRead(route('santri-detail', $data->id), 'Detail Santri '. $data->name).
+                    \Component::btnUpdate(route('santri-edit', $data->id), 'Ubah Santri '. $data->name).
+                    \Component::btnDelete(route('santri-destroy', $data->id), 'Hapus Santri '. $data->name);
                     
         })
         ->addIndexColumn()
@@ -68,6 +68,13 @@ class SantriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function detail($id)
+    {
+        $data = User::where('id', $id)->first();
+        
+        // return response()->json($data);
+        return view('cms.users.santri.detail', compact ('data'));
+    }
     public function create()
     {
         return view('cms.users.santri.create');
@@ -260,7 +267,7 @@ class SantriController extends Controller
         
         $data['subscriptions'] = DB::table('user_has_subscription')
             ->join('subscriptions','user_has_subscription.subscription_id','subscriptions.id')
-            ->select('subscriptions.name as subscription_name', 'subscriptions.price')
+            ->select('subscriptions.name as name', 'subscriptions.price as price')
             ->where('user_has_subscription.user_id', $data['user']->id)
             ->get();
 

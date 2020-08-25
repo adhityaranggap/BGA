@@ -88,6 +88,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/router', 'Web\SantriController@router')->name('santri-router');//done
             Route::get('/datatables', 'Web\SantriController@datatables')->name('santri-datatables');//done
             Route::get('/create', 'Web\SantriController@create')->name('santri-create');//done
+            Route::get('/detail/{id}', 'Web\SantriController@detail')->name('santri-detail');
             Route::get('/import', 'Web\SantriController@import')->name('santri-import');//done
             Route::post('/store', 'Web\SantriController@store')->name('santri-store');//done
             Route::post('/store/import', 'Web\SantriController@storeImport')->name('santri-store-import');//done

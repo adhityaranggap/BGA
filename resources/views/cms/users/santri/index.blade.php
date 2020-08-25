@@ -22,8 +22,6 @@
                 <table id="appTable" class="table nowrap table-bordered table-hover dataTable table-striped" style="width:100%">
                     <thead>
                     <tr>
-                    <th scope="col">No</th>
-                        <!-- <th scope="col">Name</th> -->
                         <th scope="col">NIS</th>
                         <th scope="col">Name</th>
                         <th scope="col">Nama Ayah</th>
@@ -80,8 +78,6 @@
         
         ajax: "{{ url()->current().'/datatables' }}",
         columns:[
-            {data: 'DT_RowIndex', name:'nis', searchable: false},
-            // {data: 'name', name:'name'},
             {data: 'nis', name:'nis'},
             {data: 'name', name:'name'},
             {data: 'father_name', name:'father_name'}, 
