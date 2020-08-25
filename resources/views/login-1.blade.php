@@ -76,7 +76,7 @@
                     <thead>
                         <tr>
                         <th scope="col"><b>Email Demo</b></th>
-                        <th>me@adhityarp.com</th>    
+                        <th>admin@yayasanbga.org</th>    
                         </tr>
                         <tr>
                         <th scope="col"><b>Password Demo</b></th>
