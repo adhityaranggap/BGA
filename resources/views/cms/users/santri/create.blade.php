@@ -1,8 +1,8 @@
 <form method="post" action="{{ route('santri-store') }}">
 @csrf
     <div class="form-group ">
-    <label for="name">NIS</label>
-        <input class="form-control" name="NIS" type="text" placeholder="Required" value="" id="NIS">
+    <label for="nis">NIS</label>
+        <input class="form-control" name="nis" type="text" placeholder="Required" value="" id="nis">
     </div>
 
     <div class="form-group ">
